@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Cirrhosis Stage Prediction</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f78848;
+        }
+        .navbar-brand {
+            display: block;
+            margin: auto;
+            color: #f04ada;
+            font-weight: bold;
+            font-family: "Helvetica";
+        }
+        .submit-button {
+            display: block;
+            margin: auto;
+        }
+        p {
+            text-align: center;
+        }
+        p:hover {
+            filter: brightness(150%);
+        }
+        .card {
+            display: block;
+            margin: auto;
+            text-align: center;
+        }
+        h5 {
+            font-weight: bold;
+            font-family: "Helvetica",sans;
+            color: #702702;
+            font-size: 1.8rem;
+        }
+        h1{
+            color: #780233;
+            font-family: 'Georgia', serif;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .first_row {
+            margin-top: 5rem;
+        }
+        .last_row {
+            margin-bottom: 2rem;
+        }
+        .card {
+            margin: 0 auto;
+            float: none;
+            margin-bottom: 10px;
+            background-color: #99e889;
+            border: 2px solid #c209d6;
+            border-width: 0.5rem;
+            border-size: 6rem;
+        }
+        .copyright{
+            color: #2d1280;
+            font-size: 1.5rem;
+            font-family: 'Arial',sans-serif;
+        }
+        .predict-dec {
+            text-align: center;
+            font-weight: bold;
+            color: #e30e0e;
+            font-size: 2rem;
+            font-family: 'Helvetica',sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1"><h1>Liver Cirrhosis Stage Prediction</h1></span>
+    </nav>
+    <div class="container">
+        <form action="/predict" method="post">
+            <div class="row first_row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Drug Type:</h5>
+                            <select name="drug" id="drug" required="required">
+                                <option value="D-penicillamine">D-penicillamine</option>
+                                <option value="Placebo">Placebo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Age:</h5>
+                            <input type="number" min="26" max="78" name="age" id="age" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Sex:</h5>
+                            <select name="sex" id="sex" required="required"> 
+                                    <option value="female">Female</option>
+                                    <option value="male">Male</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ascites:</h5>
+                            <select name="ascites" id="ascites" required="required">
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hepatomegaly:</h5>
+                            <select name="hepatomegaly" id="hepatomegaly" required="required">
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Spiders:</h5>
+                            <select name="spiders" id="spiders" required="required">
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Edema:</h5>
+                            <select name="edema" id="edema" required="required">
+                                <option value="No edema and no diuretic therapy for edema">No edema and no diuretic therapy for edema</option>
+                                <option value="Edema present without diuretics, or edema resolved by diuretics">Edema present without diuretics, or edema resolved by diuretics</option>
+                                <option value="Edema despite diuretic therapy">Edema despite diuretic therapy</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bilirubin:</h5>
+                            <input type="number" min="0.30" max="7.30" step="0.01" name="bilirubin" id="bilirubin" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Cholesterol:</h5>
+                            <input type="number" min="160.875" max="459.875" step="0.001" name="cholesterol" id="cholesterol" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Albumin:</h5>
+                            <input type="number" min="2.45" max="4.56" step="0.01" name="albumin" id="albumin" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Copper:</h5>
+                            <input type="number" min="4.0" max="175.0" step="0.1" name="copper" id="copper" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Alkaline Phosphatase:</h5>
+                            <input type="number" min="289.0" max="2745.0" step="0.1" name="alk_phos" id="alk_phos" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">SGOT:</h5>
+                            <input type="number" min="26.35" max="202.88" step="0.01" name="sgot" id="sgot" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Tryglycerides:</h5>
+                            <input type="number" min="45.875" max="176.875" step="0.001" name="tryglycerides" id="tryglycerides" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row last_row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Platelets:</h5>
+                            <input type="number" min="62.00" max="503.75" step="0.01" name="platelets" id="platelets" required="required">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Prothrombin:</h5>
+                            <input type="number" min="9.00" max="12.75" step="0.01" name="prothrombin" id="prothrombin" required="required">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Submit -->
+            <input type="submit" value="Submit" class="btn btn-primary submit-button">
+        </form>
+        <br>
+        <h3 class="predict-dec">{{ prediction_text }}</h3> 
+        <br>
+        <p class="copyright">@2022 Sayam Kumar</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
