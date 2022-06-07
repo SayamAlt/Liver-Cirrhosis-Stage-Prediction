@@ -2,8 +2,7 @@ sklearn
 numpy  
 pandas  
 seaborn   
-matplotlib  
-collections 
+matplotlib   
 joblib  
 flask 
 gunicorn 
