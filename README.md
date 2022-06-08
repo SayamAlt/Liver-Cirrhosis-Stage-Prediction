@@ -1,5 +1,23 @@
 # Liver-Cirrhosis-Stage-Prediction
 
+<p>Liver cirrhosis is a widespread problem especially in North America due to high intake of alcohol. In this project, we will predict liver cirrhosis in a patient based on certain lifestyle and health conditions of a patient.</p>
+
+![Liver Cirrhosis Prediction](https://guires.uk/newsroom/wp-content/uploads/2019/11/Predicting-Liver-Disease.jpg)
+![Liver Cirrhosis Stages](https://d3i71xaburhd42.cloudfront.net/20af2ad24625beee1ef72db51991693ac327cafc/1-Figure1-1.png)
+![Liver Cirrhosis](https://storage.googleapis.com/kaggle-datasets-images/1508604/2492013/6d386c31b15dfe79f78ccb52084e2100/dataset-cover.jpg?t=2021-08-02-15-24-05)
+
+## Objective
+
+<p>The main target is to predict the stage of the liver cirrhosis disease. The dataset consists of both numerical as well as categorical features.</p>
+
+<p>In liver cirrhosis, there are 4 stages which are as follows:</p>
+<ol>
+  <li>Stage 1 : Normal</li>
+  <li>Stage 2 : Fatty Liver</li>
+  <li>Stage 3 : Liver Fibrosis</li>
+  <li>Stage 4 : Liver Cirrhosis</li>
+</ol>
+
 ## Deployed Web Application
 
 Link: https://cirrhosis-stage-prediction.herokuapp.com/
