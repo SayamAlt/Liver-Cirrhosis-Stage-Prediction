@@ -3,7 +3,9 @@
 <p>Liver cirrhosis is a widespread problem especially in North America due to high intake of alcohol. In this project, we will predict liver cirrhosis in a patient based on certain lifestyle and health conditions of a patient.</p>
 
 ![Liver Cirrhosis Prediction](https://guires.uk/newsroom/wp-content/uploads/2019/11/Predicting-Liver-Disease.jpg)
+
 ![Liver Cirrhosis Stages](https://d3i71xaburhd42.cloudfront.net/20af2ad24625beee1ef72db51991693ac327cafc/1-Figure1-1.png)
+
 ![Liver Cirrhosis](https://storage.googleapis.com/kaggle-datasets-images/1508604/2492013/6d386c31b15dfe79f78ccb52084e2100/dataset-cover.jpg?t=2021-08-02-15-24-05)
 
 ## Objective
