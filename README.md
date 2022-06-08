@@ -6,14 +6,12 @@
 
 ![Liver Cirrhosis Stages](https://d3i71xaburhd42.cloudfront.net/20af2ad24625beee1ef72db51991693ac327cafc/1-Figure1-1.png)
 
-![Liver Cirrhosis](https://storage.googleapis.com/kaggle-datasets-images/1508604/2492013/6d386c31b15dfe79f78ccb52084e2100/dataset-cover.jpg?t=2021-08-02-15-24-05)
-
 ## Objective
 
 <p>The main target is to predict the stage of the liver cirrhosis disease. The dataset consists of both numerical as well as categorical features.</p>
 
-<p>In liver cirrhosis, there are 4 stages which are as follows:</p>
-<ol>
+<p>In liver cirrhosis, there are 4 stages which are as follows:</p([
+](https://storage.googleapis.com/kaggle-datasets-images/1508604/2492013/6d386c31b15dfe79f78ccb52084e2100/dataset-cover.jpg?t=2021-08-02-15-24-05)<ol>
   <li>Stage 1 : Normal</li>
   <li>Stage 2 : Fatty Liver</li>
   <li>Stage 3 : Liver Fibrosis</li>
