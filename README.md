@@ -104,4 +104,4 @@ Processes and Survival Analysis, Wiley, 1991. A more extended discussion can be 
 
 <p>The dataset can be found in appendix D of:</p>
 
-    [Fleming, T.R. and Harrington, D.P. (1991) Counting Processes and Survival Analysis. Wiley Series in Probability and Mathematical Statistics: Applied Probability and Statistics, John Wiley and Sons Inc., New York.]
+    Fleming, T.R. and Harrington, D.P. (1991) Counting Processes and Survival Analysis. Wiley Series in Probability and Mathematical Statistics: Applied Probability and Statistics, John Wiley and Sons Inc., New York.
