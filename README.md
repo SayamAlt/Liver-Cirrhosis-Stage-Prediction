@@ -10,7 +10,7 @@
 
 <p>In liver cirrhosis, there are mainly 4 stages which are as follows:</p>
 
-<ol>
+<ol type="a">
   <li>Stage 1 : Normal</li>
   <li>Stage 2 : Fatty Liver</li>
   <li>Stage 3 : Liver Fibrosis</li>
