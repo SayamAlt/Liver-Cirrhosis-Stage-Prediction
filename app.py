@@ -91,7 +91,7 @@ def predict():
         platelets = float(request.form['platelets']) #range: (62.0,503.75)
         prothrombin = float(request.form['prothrombin']) #range: (9.0,12.75)
         
-        X_test = scaler.inverse_transform([[
+        X_test = scaler.transform([[
                 drug,
                 age,
                 sex,
@@ -109,14 +109,14 @@ def predict():
                 platelets,
                 prothrombin
         ]])
-        
+#         print(X_test)
         predictions = model.predict(X_test)
         output = predictions[0]
-        
+#         print(output)
         if output == 1:
-            return render_template('home.html',prediction_text="The person with the given details has normal liver.")
+            return render_template('home.html',prediction_text="The person with the given details has a normal liver.")
         elif output == 2:
-            return render_template('home.html',prediction_text="The person with the given details has fatty liver.")
+            return render_template('home.html',prediction_text="The person with the given details has a fatty liver.")
         elif output == 3:
             return render_template('home.html',prediction_text="The person with the given details is suffering from Liver Fibrosis.")
         elif output == 4:
